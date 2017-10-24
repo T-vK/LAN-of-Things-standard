@@ -1,0 +1,83 @@
+#%RAML 1.0
+title: "LAN of things HTTP API specs"
+version: "1.0.0"
+description: "Open source standard for LAN of things (LANOT) nodes. A LANOT node is an HTTP server that provides an interface to control one or more LANOT devices. A LANOT device can be alymost anything: a light, a thermostat, a TV, a coffee machine, a door lock, window blinds, an outlet controller, "
+
+types:
+  device-interface:
+    properties:
+      type:
+        description: "The device type. (TODO: Add reference to allowed types.)"
+        type: "string"
+        required: true
+      device-id:
+        description: "A unique id of your choice for the device."
+        type: "string"
+        required: true
+      features:
+        description: "A list of all the features that can be controlled using this device interface."
+        type: string[]
+        required: true
+
+/device-interfaces:
+  get:
+    description: "Returns a JSON array of devices that can be controlled by this node. This includes, for each device, a list of features that can be controlled by the node. Please note that different nodes may be able to control different features of the same device."
+    responses:
+      200:
+        body:
+          application/json:
+            type: device-interface[]
+            example: 
+              [
+                  {
+                      "type": "tv",
+                      "device-id": "bedroom-tv",
+                      "features": [
+                          "volume-up",
+                          "volume-down",
+                          "channel-up",
+                          "channel-down",
+                          "set-channel-number",
+                          "mute-toggle",
+                          "standby-toggle"
+                      ]
+                  },
+                  {
+                      "type": "temperature-sensor",
+                      "device-id": "bedroom-temp",
+                      "features": [
+                          "get-temperature"
+                      ]
+                  }
+              ]
+  /generic-light/{device-id}:
+    /turn-on:
+      get:
+        description: "Turns the light on."
+        responses:
+          200:
+    /turn-off:
+      get:
+        description: "Turns the light off."
+        responses:
+          200:
+  /thermostat/{device-id}:
+    uriParameters:
+      device-id:
+        displayName: device-id
+        type: string
+        description: "The device id."
+        example: "bedroom-thermostat"
+        required: true
+    /set-temperature/{temperature}:
+      uriParameters:
+        temperature:
+          displayName: temperature
+          type: number
+          description: "The temperature in degrees Celsius."
+          example: 22.5
+          required: true
+      get:
+        description: "Set the temperature for the thermostat."        
+        responses:
+          200:
