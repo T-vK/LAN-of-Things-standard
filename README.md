@@ -8,6 +8,9 @@ This is an attempt to create an open standard for LAN of things devices. LAN of 
 - LANOT node: A chip/device/server that is connected to a network and exposes one or more device interfaces to the network. It also listens to specific broadcast messages and informs 
 - LANOT interfacer: A device/program/app that can access/control one or more LANOT devices by interfacing with one or more LANOT nodes (e.g. Sending a GET request to `http://{IP_OF_A_LANOT_NODE}/thermostat/bedroom-thermostat/set-temperature/22` to tell a thermostat to change the temperature to 22 degrees Celsius.
 
+# HTTP API
+https://t-vk.github.io/LAN-of-Things-standard/LAN-of-Things-standard.html
+
 # Abstract Example 
 
 ```
