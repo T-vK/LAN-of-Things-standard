@@ -5,7 +5,7 @@ This is an attempt to create an open standard for LAN of things devices. LAN of 
 - LANOT: short form for LAN of things
 - LANOT device: A device such as a TV, a thermostat, a coffee machine, a computer, a computer program, a light, a remote controlled outlet, etc.
 - LANOT device interface: An HTTP based interface to control one specific LANOT device (e.g. turn on, turn off, increase brightness etc.).
-- LANOT node: A chip/device/server that is connected to a network and exposes one or more device interfaces to the network. It also listens to specific broadcast messages and informs 
+- LANOT node: A chip/device/server that is connected to a network and exposes one or more device interfaces to the network. It also listens to specific broadcast messages and informs the sender about its existence.
 - LANOT interfacer: A device/program/app that can access/control one or more LANOT devices by interfacing with one or more LANOT nodes (e.g. Sending a GET request to `http://{IP_OF_A_LANOT_NODE}/thermostat/bedroom-thermostat/set-temperature/22` to tell a thermostat to change the temperature to 22 degrees Celsius.
 
 # HTTP API
