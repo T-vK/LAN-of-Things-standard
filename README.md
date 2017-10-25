@@ -1,5 +1,8 @@
 # LAN-of-Things-standard
-This is an attempt to create an open standard for LAN of things devices. LAN of things devices are devices that are connected to a network, but not necessarily the Internet. 
+This is an attempt to create an open standard for LAN of things devices. LAN of things devices are devices that are connected to a network, but not necessarily the Internet.  
+
+# Work in progress
+This is still a work in progress. The API spec is not done yet.
 
 # Terminology
 - LANOT: short form for LAN of things
