@@ -2,7 +2,7 @@
 This is an attempt to create an open standard for LAN of things devices. LAN of things devices are devices that are connected to a network, but not necessarily the Internet.  
 
 # Get involved
-This project is still a work in progress. If you want to get involved, have an idea, suggestion or question, feel free to open an issue. 
+This project is still a work in progress. If you want to get involved, have an idea, suggestion or question, feel free to [open an issue](https://github.com/T-vK/LAN-of-Things-standard/issues/new). 
 
 # Terminology
 
