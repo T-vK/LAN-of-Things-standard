@@ -1,6 +1,9 @@
 # LAN-of-Things-standard
 This is an attempt to create an open standard for LAN of things devices. LAN of things devices are devices that are connected to a network, but not necessarily the Internet.  
 
+# Status
+Discontinued for now. It seems like the WoT specifications have the same goal. I am not certain yet, though.
+
 # Get involved
 This project is still a work in progress. If you want to get involved, have an idea, suggestion or question, feel free to [open an issue](https://github.com/T-vK/LAN-of-Things-standard/issues/new). 
 
